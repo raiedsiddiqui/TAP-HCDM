@@ -8,33 +8,11 @@
     <%@include file="volunteer/volunteer_head.jsp" %>
     <link rel="shortcut icon" href="/tapestry/resources/images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="144x144" href="/tapestry/resources/images/apple-touch-icon-144x144.png">
-
-<!--     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="favicons/manifest.json">
-    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff"> -->
-
     <style type="text/css">
     body {
-      background-color: #444;
-      padding-right: 0px;
-      padding-left: 0px;
+      background-color: rgb(242, 242, 242);
     }
-/*      #footer {
+      #footer {
         position: absolute;
         bottom: 0;
         background-color: #444;
@@ -42,11 +20,11 @@
         padding: 30px;
         height:100px;
         border-top: 5px solid white;
-        }*/
+        }
         
         #content {
-          background-color: #4A307A;
-          padding-top:20px;
+/*          background-color: #4A307A;
+*/          padding-top:20px;
           border-bottom: 
         }
 
@@ -76,7 +54,7 @@
         }
 
         h2 {
-          color:white;
+          color: black;
           font-family: Open Sans;
           font-weight: 200;
         }
@@ -87,60 +65,39 @@
           text-align: center;
         }
 
-        /*Mobile Phone Custom CSS*/
-        @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) { 
-          .form-horizontal {
-            width:100%;
-          }
-
-          .smallicon {
-            padding: 21px 4px 26px 10px;
-          }
-
-          #logininput {
-            font-size: 15px;
-          }
-          #loginbtn {
-            height: 50px;
-            width:100%;
-          }
-          h2 {
-            font-size: 20px;
-          }
-
-         }
-
     </style>
- 	</head>
- 	<body>
+  </head>
+  <body>
   <div id="headerholder"> 
     <div class="row">
       <div class="col-md-12 tpurple logoheightlogin">
-        <img id="logo" src="<c:url value="/resources/images/logow.png"/>" />
+        <!-- <img id="logo" src="<c:url value="/resources/images/tapcm.png"/>" /> -->
+        <h1 style="font-family:OpenSans;color:white">TAP HCDM</h1>
       </div>
 
 <!--     <div class="col-md-9 tblack" style="height:63px;">
  -->
     </div>
   </div>
+</div>
 
 
     <div id="content">
-  	<!-- 	<img id="logo" src="${pageContext.request.contextPath}/resources/images/logo.png" />
+    <!--  <img id="logo" src="${pageContext.request.contextPath}/resources/images/logo.png" />
         <img id="logofam" src="${pageContext.request.contextPath}/resources/images/fammed.png"/> 
         <img id="logofhs" src="${pageContext.request.contextPath}/resources/images/fhs.png"/>
         <img id="logodeg" src="${pageContext.request.contextPath}/resources/images/degroote.png"/>-->
-   			<div class="row">
+        <div class="row">
+          
+
           <div class="col-md-12">
-					 <c:if test="${not empty error}">
-					<div class="alert alert-danger">Login failed <br /> Caused :
-							${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
-          </div>
-					</c:if>
-					<c:if test="${not empty usernameChanged}">
-					<div class="alert alert-info">Your username has changed. Please log in again using the new credentials.
-          </div>
-					</c:if>
+           <c:if test="${not empty error}">
+          <div class="alert alert-danger">Login failed <br /> Caused :
+              ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</div>
+          </c:if>
+          <c:if test="${not empty usernameChanged}">
+          <div class="alert alert-info">Your username has changed. Please log in again using the new credentials.</div>
+          </c:if>
         </div>
       </div>
 
@@ -172,48 +129,48 @@
         </div>
         <br>
 
-        <div class="row">
+        <div class="row-fluid">
           <div class="col-md-12">
           <input id="loginbtn" type="submit" value="LOGIN" style="margin-bottom:10px;"></input>
           </div>
         </div>
       </form>
   </div>
-  <div class="row" id="footer">
-    <div class="col-md-12">
-        <img id="logofhs" src="${pageContext.request.contextPath}/resources/images/fhswhite.png"/>
-        <img id="logodeg" src="${pageContext.request.contextPath}/resources/images/degrootewhite.png"/>
-    </div>
-  </div>
 </div>
 
 
 
-<!--      				<div class="area">
-	      				<form class="form-horizontal" action="<c:url value="j_spring_security_check" />" method="POST">
-       						<div class="heading">
-        						<h4 class="form-heading">Sign In Please</h4>
-       						</div>
-       						<div class="control-group">
-	        					<label class="control-label" for="username">Username</label>
-        						<div class="controls">
-	         						<input id="logininput" type="text" name="j_username" placeholder="username" />
-        						</div>
-       						</div>
-       						<div class="control-group">
-								<label class="control-label" for="password">Password</label>
-        						<div class="controls">
-	         						<input id="logininput" type="password" name="j_password" placeholder="password" />
-        						</div>
-       						</div>
-       						<div class="control-group">
-	        					<div class="controls">
-									<input id="logininput" type="submit" value="Login" style="margin-bottom:10px;"></input>
-									<p>Tapestry 13.11.14</p>
-        						</div>
-       						</div>
-      					</form>
-     				</div> -->
-          
- 	</body>
+<!--              <div class="area">
+                <form class="form-horizontal" action="<c:url value="j_spring_security_check" />" method="POST">
+                  <div class="heading">
+                    <h4 class="form-heading">Sign In Please</h4>
+                  </div>
+                  <div class="control-group">
+                    <label class="control-label" for="username">Username</label>
+                    <div class="controls">
+                      <input id="logininput" type="text" name="j_username" placeholder="username" />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                <label class="control-label" for="password">Password</label>
+                    <div class="controls">
+                      <input id="logininput" type="password" name="j_password" placeholder="password" />
+                    </div>
+                  </div>
+                  <div class="control-group">
+                    <div class="controls">
+                  <input id="logininput" type="submit" value="Login" style="margin-bottom:10px;"></input>
+                  <p>Tapestry 13.11.14</p>
+                    </div>
+                  </div>
+                </form>
+            </div> -->
+          <div id="footer">
+            <div class="col-md-12">
+                <img id="logofhs" src="${pageContext.request.contextPath}/resources/images/fhswhite.png"/>
+                <img id="logodeg" src="${pageContext.request.contextPath}/resources/images/degrootewhite.png"/>
+            </div>
+        </div>
+
+  </body>
 </html>

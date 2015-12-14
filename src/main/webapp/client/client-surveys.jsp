@@ -8,12 +8,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+
+</style>
 <%@include file="../volunteer/volunteer_head.jsp" %>
 <title>Client Surveys</title>
 </head>
 <body>
+<%@include file="navclient.jsp" %>
+
 <div class="container">
-<h3 class="pagetitle"> Welcome ${patient.firstName} ${patient.lastName}!                        <a href="<c:url value="/logout"/>">Log Out</a></h3>
+<h3 class="pagetitle" style="font-size:23px"> Welcome ${patient.firstName} ${patient.lastName}!</h3>
+<p>Below you will see sections related to your health. In each section, you will complete some brief questions about your health goal and current health practices as well as get some tailored information sheets, suggestions and helpful links. You will receive a report within a week. The information you fill in will be shared with your family health team. You can start with any section you like; please compete all four (4) sections. If at any time you run into difficulty, please see our help resources or contact 905-525-9140 ext. 20305 for over-the-phone assistance.</p>
+
+<h3 class="pagetitle" style="float:none">Surveys <span class="pagedesc"></span></h3>
 
  <c:forEach items="${inProgressSurveys}" var="ips">
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -33,7 +41,7 @@
 	</c:choose>
 	</div>
 </c:forEach>
-<h4 class="pagetitle" style="float:none">Completed Surveys <span class="pagedesc"></span></h4>
+<h3 class="pagetitle" style="float:none">Completed Surveys <span class="pagedesc"></span></h3>
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 	<c:forEach items="${completedSurveys}" var="csr">

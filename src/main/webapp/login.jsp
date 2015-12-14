@@ -71,9 +71,9 @@
   <div id="headerholder"> 
     <div class="row">
       <div class="col-md-12 tpurple logoheightlogin">
-        <!-- <img id="logo" src="<c:url value="/resources/images/tapcm.png"/>" /> -->
-        <h1 style="font-family:OpenSans;color:white">TAP HCDM</h1>
-      </div>
+        <img id="logo" src="<c:url value="/resources/images/hcdmlogo.png"/>" />
+<!--         <h1 style="font-family:OpenSans;color:white">TAP HCDM</h1>
+ -->      </div>
 
 <!--     <div class="col-md-9 tblack" style="height:63px;">
  -->

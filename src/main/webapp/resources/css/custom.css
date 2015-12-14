@@ -1,15 +1,23 @@
 body {
-	margin: 0 auto;
+	margin: 0 auto;	
+	background-color: white;
 }
 img {
 
 }
-#logo {
-	width: 230px !important;
-	/*float: left;*/
-	margin-top: -5px
-}
 
+#footer {
+	position: absolute;
+	bottom: 0;
+	background-color: #444;
+	width: 100%;
+	padding: 30px;
+	height:100px;
+}
+#logo {
+	width: 220px !important;
+	float: left;
+}
 #logofam {
 	height: 60px;
 	width: 120px;
@@ -35,7 +43,6 @@ img {
 #logininput {
 	height: 70px;
 	width: 55%;
-	min-width: 240px;
 	font-size: 25px;
 	font-family: 'Open Sans', serif;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); 
@@ -55,7 +62,6 @@ img {
 	border:0;
 	margin-top: 4%;
 	height: 70px;
-
 }
 
 #homebtn {
@@ -94,19 +100,17 @@ img {
 Lanscape CSS ENDS*/
 
 .pname {
-	margin-bottom: 8px;
-	margin-top: 8px;
-	width: 100%;
+
 }
 
 #answer {
 	width: 90%;
-	height: 300px;
+	height: 250px;
 	font-size: 20px;
 }
 .cbutton {
 	width: 100%;
-	/*height: 40px;*/
+	height: 40px;
 	text-align: left;
 	/* padding-left: 20px; */
 	padding-right: 20px;
@@ -119,6 +123,58 @@ Lanscape CSS ENDS*/
 
 }
 
+/*CustomButtons*/
+.cb-btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.cb-btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1c */
+.cb-btn-1c:after {
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+.cb-btn-1c:hover,
+.cb-btn-1c:active {
+	color: #0e83cd;
+}
+
+.cb-btn-1c:hover:after,
+.cb-btn-1c:active:after {
+	width: 100%;
+}
+
+
+/*CustomButtons*/
+
 .pbutton {
 	width: 100%;
 	height: 40px;
@@ -128,34 +184,35 @@ Lanscape CSS ENDS*/
 	padding-top: 6px;
 	font-size: 18px; 
 	font-family:'Open Sans', 'sans-serif';
-	background-color: rgba(108, 93, 0, 0.66);
+	background-color: #6BB040;
 	color:white;
 
 
-}
-
-#footer {
-	background-color: #444;
-	width: 100%;
-	padding: 30px;
-	height:inherit;
-	margin-top:5%;
 }
 
 .squestion {
 	margin: 0 auto;
 	/*border: 1px solid black;*/
-	width: 90%;
-	height: 550px;
+	width: 85%;
+	margin-left: 20px;
+
 }
 
 #saveclose {
-	color:white;
 	float:right;
-	background-color:rgba(23, 58, 183, 0.85);
-	box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
-	margin-top: 10px;
-	font-size:18px;
+	background-color: #6BB040;
+	border: 1px solid #6BB040;
+	margin-top: 20px;
+	color:white;
+	font-size: 20px;	
+}
+
+#saveclose:hover {
+	background-color: #BF1F82;
+	transition: all 1.1s;
+	-moz-transition: all 1.3s;
+	-webkit-transition:all 1.3s;
+
 }
 .tright {
 	float:right;
@@ -167,25 +224,29 @@ Lanscape CSS ENDS*/
 	background-color: #E96B56;
 }
 .surveybtn {
-	width:100% !important;
-	font-size: 30px;
+	width: 100% !important;
+	font-size: 33px;
+	/* margin: 0 auto; */
 	font-family: 'Open Sans', serif;
-	background-color: #6BB040;
+	background-color: #00aad1;
 	color: white;
 	margin-bottom: 10px;
 	min-height: 78px;
+	text-align: center;
 }
 
 /*Button for inactive surveys */
 .surveybtnc {
 	width:100% !important;
-	font-size: 30px;
+	font-size: 20px;
 	font-family: 'Open Sans', serif;
-	background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.84), #C2C2C2) !important;
-	background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(150, 150, 150, 0.84)), to(#C2C2C2)) !important;
-	color: white;
+	/*background-image: linear-gradient(to bottom, rgba(150, 150, 150, 0.84), #C2C2C2) !important;
+	background-image: -webkit-gradient(linear, left bottom, right top, from(rgba(150, 150, 150, 0.84)), to(#C2C2C2)) !important;*/
+	color: black;
 	margin-bottom: 10px;
 	min-height: 40px;
+	text-align: left;
+	border-left: 10px solid gray;
 }
 
 .surveydesc {
@@ -200,16 +261,23 @@ Lanscape CSS ENDS*/
 
 
 #qtext {
-	margin-top: 2%;
 	line-height: 1.2;
 	/*border-top: 1px solid #cdcdcd;
 	border-bottom: 1px solid #cdcdcd;*/
 	font-family: 'Open Sans', serif;
-	font-weight: 400;
+	font-weight: 250;
 	font-size: 30px;
 }
 
-#surveybackground {
+#surveybackground > ul {
+list-style: none;
+}
+
+div.alert.alert-success {
+	font-size: 26px !important;
+	color:black;
+	background-color: rgba(242, 255, 77, 0.18);
+	
 
 }
 
@@ -243,10 +311,7 @@ Lanscape CSS ENDS*/
 	height:200px;
 }
 #answer-buttons {
-	/*position: absolute;*/
-	margin-bottom: 3em;
-	margin-top: 3em;
-	/*width: 90%;*/
+	width: 100%
 }
 input[type=submit] {
     -webkit-border-radius:0px;
@@ -270,26 +335,10 @@ margin-top: 15px;
 	color: white;
 }
 
-h2, h3 {
-	font-family: 'Open Sans', sans-serif;
-}
-
-.pagetitle {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 500;
-	border-left: 10px solid #F7D600;
-	width: 45%;
-	padding: 5px 10px 3px 10px;
-	margin-left: -15px
-}
-
-.pagedesc {
-	font-size: 13px;
-	/* clear:both; */
-	display: block;
-	padding-top: 3px;
-}
-
+.span12 h3 {
+	font-size: 25px;
+	font-family: 'Roboto Slab', serif;
+	}
 
 .app-date {
 	font-family: 'Open Sans', serif; 
@@ -403,7 +452,7 @@ input > #contacted {
 	background-color: #4A307A;
 	border:none;
 	border-radius: 0px;
-	margin-top: 25px;
+	/*margin-top: 15px;*/
 
 }
 
@@ -497,7 +546,7 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 }
 
 .tpurple {
-	background-color: #BF1F82;
+	background-color: #00aad1;
 }
 
 .tblack {
@@ -505,13 +554,8 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 
 }
 
-
 .logoheight {
 	height:63px;
-}
-
-.logoheightlogin {
-	height:83px;
 }
 
 #linav {
@@ -542,12 +586,6 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 	font-weight: 600;
 }
 
-
-.nav>li>a:hover
-{
-	color:black;
-}
-
 @media (min-width: 768px) {
 	.navbar .nav > li > a
 	{
@@ -556,7 +594,7 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 		font-size: 14px !important;
 		/*border-left: 1px solid white;*/
 		font-family: 'Open Sans', 'sans-serif';
-		color: white;
+		color: white !important;
 	}
 
 	.navbar .brand {
@@ -627,8 +665,8 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 
 
 	div.area {
-		width: 80%;
-		margin: 10% auto;
+		width: 20%;
+		margin: 0 auto;
 	}
 
 	/*.form-horizontal .controls {
@@ -661,6 +699,10 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 		height: 60px;
 	}
 
+	.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
+		width: 70%;
+		/*float: right;*/
+	}
 
 	.patientinfo {
 		padding: 4px;
@@ -707,12 +749,8 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 		font-size: 20px !important;
 		/*border-left: 1px solid white;*/
 		font-family: 'Open Sans', 'sans-serif';
-		color: white;
+		color: white !important;
 		font-weight: 300;
-	}
-
-	.navbar .nav > li > a:hover {
-		color:black;
 	}
 
 	.navbar .brand {
@@ -729,18 +767,31 @@ div.bootstrap-datetimepicker-widget.dropdown-menu.pull-right {
 		border-right: 5px solid white;
 		}
 
+	.pageheader {
+		font-size: 25px;
+		font-family: 'Open Sans';
+		font-weight: 500;
+		/* margin-bottom: 4%; */
+		/* border-bottom: 1px solid lightgray; */
+		/* border-top: 1px solid lightgray; */
+		/* text-transform: uppercase; */
+		/* margin-top: 3%; */
+		letter-spacing: 1px;
+		/* background: */ border-bottom: 1px solid rgb(83, 83, 83);
+		/* width: auto; */
+		text-transform: uppercase;
+		color: #4A307A;
+		margin-top: 10px;
+	}
+
 	/*#footer {
-		position: absolute;
-		bottom: 0;
-		background-color: #444;
-		width: 100%;
-		padding: 30px;
-		height:100px;	
+		top:150px;
 	}*/
 
 	#headerholder {
 	/*	border-bottom: 2px solid lightgray;
 	*/	height: auto;
+	margin-bottom: 15px;
 	}
 
 	.lgbtn:hover {

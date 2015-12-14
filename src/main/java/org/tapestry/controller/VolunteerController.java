@@ -468,6 +468,32 @@ public class VolunteerController {
 		return "/admin/modify_volunteer";
 	}
 	
+	@RequestMapping(value="/tipps", method=RequestMethod.GET)
+	public String tipps(@RequestParam(value="error", required=false) String errorsPresent, 
+			@RequestParam(value="success", required=false) String success, SecurityContextHolderAwareRequestWrapper request, 
+			ModelMap model)
+	{	
+		User loggedInUser = TapestryHelper.getLoggedInUser(request, userManager);
+		model.addAttribute("loggedInUserId", loggedInUser.getUserID());
+		TapestryHelper.setUnreadMessage(request, model, messageManager);
+		
+		if (errorsPresent != null)
+			model.addAttribute("errors", errorsPresent);
+		if(success != null)
+			model.addAttribute("success", true);
+//		List<Picture> pics = pictureManager.getPicturesForUser(loggedInUser.getUserID());
+//		model.addAttribute("pictures", pics);
+		
+		
+				
+		//add log
+		StringBuffer sb = new StringBuffer();
+		sb.append(loggedInUser.getName());
+		sb.append(" is viewing Resource Section ");		
+		userManager.addUserLog(sb.toString(), loggedInUser);
+		return "/client/tipps";
+	}
+	
 	@RequestMapping(value="/update_volunteer/{volunteerId}", method=RequestMethod.POST)
 	public String updateVolunteer(SecurityContextHolderAwareRequestWrapper request, 
 			@PathVariable("volunteerId") int id, ModelMap model)

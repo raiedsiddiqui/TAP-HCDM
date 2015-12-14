@@ -228,7 +228,7 @@
     			<div id="squestion2" > <!-- style="float: left;" -->
         			<!-- Look at the div with class="questionWidth" at the bottom to adjust question min-width) -->
         			
-        			<form action="/hcdm/show_survey/<%=documentId%>" name="surveyQuestion" id="surveyform">
+        			<form action="/HCDM/show_survey/<%=documentId%>" name="surveyQuestion" id="surveyform">
             			<input id="qID" type="hidden" name="questionid" value="<%=question.getId()%>">
             			<input type="hidden" name="direction" value="forward">
             			<input id="dID" type="hidden" name="documentid" value="<%=documentId%>">
